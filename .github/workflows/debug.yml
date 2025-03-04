@@ -1,4 +1,4 @@
-name: Release Software Artifact (Butterfly or Leonardo) to Portale Licenze
+name: Showcase problem with windows-2025 image
 
 on:
   workflow_dispatch:
