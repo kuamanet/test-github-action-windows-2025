@@ -23,6 +23,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3.5.2
       - name: Build
-        run: |-
-          dotnet build
-          dotnet run --project .\ConsoleApp\ConsoleApp.csproj --flavor="${{inputs.flavor}}" --environment="${{inputs.environment}}" --version="${{inputs.version}}"
+        run: dotnet build
+      - name: Run - read args from command line and print them
+        run: dotnet run --project .\ConsoleApp\ConsoleApp.csproj --flavor="${{inputs.flavor}}" --environment="${{inputs.environment}}" --version="${{inputs.version}}"
