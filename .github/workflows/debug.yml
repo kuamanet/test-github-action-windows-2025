@@ -12,7 +12,6 @@ on:
       version:
         description: 'Version: the sem-ver of the artifact. Will also be appended to the setup filename'
         required: true
-        type: string
 
 jobs:
   upload-setup-artifact:
@@ -25,5 +24,5 @@ jobs:
       - name: Build
         run: dotnet build
       - name: Run - read args from command line and print them
-        run: dotnet run --project .\ConsoleApp\ConsoleApp.csproj --flavor="${{inputs.flavor}}" --environment="${{inputs.environment}}" --version="${{inputs.version}}"
+        run: dotnet run --project .\ConsoleApp\ConsoleApp.csproj --f="${{inputs.flavor}}" --e="${{inputs.environment}}" --v="${{inputs.version}}"
         shell: pwsh
