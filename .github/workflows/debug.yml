@@ -25,4 +25,3 @@ jobs:
         run: dotnet build
       - name: Run - read args from command line and print them
         run: dotnet run --project .\ConsoleApp\ConsoleApp.csproj --f "${{inputs.flavor}}" --e "${{inputs.environment}}" --v "${{inputs.version}}"
-        shell: pwsh
